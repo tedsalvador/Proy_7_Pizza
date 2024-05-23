@@ -1,25 +1,4 @@
-
-/*import { existenIngredientes, mezclaringredientes, dejarreposar} from "./js/prepararpizza.js";*/
-
-let numIngresado1 = 3;
-
-function app(){
-    printTerminal(existenIngredientes("Peperoni"));
-    printTerminal(mezclaringredientes("true"));
-    dejarreposar();
-}
-
-app()
-
-function printTerminal(data){
-    console.log(data);
-}
-
-function printBrowser(element, data){
-    element.innerHtml=data;
-}
-
-function mezclaringredientes(preparar){    
+export function mezclaringredientes(preparar){    
     //preparacion generica
     let pizzapreparada = "False";
     let ingredientesOK = "True";
@@ -29,7 +8,7 @@ function mezclaringredientes(preparar){
     return mensaje;
 }
 
-function existenIngredientes(tipopizza){
+export function existenIngredientes(tipopizza){
     //segun tipo de pizza utiliza ingredientes
     //preparacion generica
     let ingredientes = "False";    
@@ -39,7 +18,7 @@ function existenIngredientes(tipopizza){
     return mensaje;
 }
 
-function dejarreposar(){
+export function dejarreposar(){
     let mensaje="--"
     console.log("base para 1 pizza");
     console.log("dejar la base para 1 pizza reposar durante 45 minutos");    
